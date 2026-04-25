@@ -24,10 +24,12 @@ A fully autonomous USB Wi-Fi dongle solution for ESP32-S2/S3/P4.
 
 ## 🛠 Hardware Requirements
 - **MCU:** ESP32-S2, ESP32-S3, or ESP32-P4 board with USB-OTG support
-- **LED:** Addressable RGB LED (WS2812/SK6812) wired to **GPIO48** (default for ESP32-S3 DevKitC)
+- **LED (Optional):** Addressable RGB LED (WS2812/SK6812) for status indication.
+  - *Default Pin:* **GPIO48** (ESP32-S3 DevKitC/UNO), **GPIO18** (ESP32-S2 Saola).
+  - *Note:* If your board uses a different pin or has no LED, the firmware will automatically detect this, log a warning, and continue working normally without visual indication. No code changes required.
 - **USB Cable:** Data-capable USB cable for power & enumeration
 - **Mobile App:** [ESP-Touch](https://github.com/EspressifApp/EsptouchForAndroid) (Android) or [ESP-Touch](https://github.com/EspressifApp/EsptouchForIOS) (iOS)
-
+  
 > ⚠️ **Note on LED Pin:** The code defaults to `GPIO48`. If your board uses a different pin, modify `#define BLINK_GPIO` in `main/cmd_wifi.c`. The initialization routine safely handles missing LEDs without crashing.
 
 ## 📦 Software & Build
