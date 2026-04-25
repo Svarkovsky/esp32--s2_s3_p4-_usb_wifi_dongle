@@ -95,6 +95,10 @@ For details on:
 
 Please refer to the **original documentation** linked above. Our modification focuses on **autonomous Wi-Fi setup** and **LED status indication**, keeping the core USB stack intact.
 
+## 📜 License
+This project is licensed under the **Apache License 2.0**.  
+Original copyright belongs to Espressif Systems. Modifications and enhancements are attributed to Ivan Svarkovsky, 2026.
+
 
 
 
